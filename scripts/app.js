@@ -7,6 +7,11 @@
 // }
 function continuegame(){
     const alphabet=getRandomAlphabets();
+    console.log(alphabet);
+
+
+    const showalphabet=document.getElementById('current_alphabet');
+    showalphabet.innerText=alphabet;
 
 }
 
