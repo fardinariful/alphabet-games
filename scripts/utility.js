@@ -8,6 +8,11 @@ function showelement(elementID){
     element.classList.remove('hidden');
 }
 
+// function addbackgroundcolor(elementID){
+//     const element =document.getElementById(elementID);
+//     element.classList.add('bg-orange-400');
+// }
+
 function getRandomAlphabets(){
     const alphabets_string= 'abcdefghijklmnopqrstuvwxyz';
     const alphabets=alphabets_string.split('');

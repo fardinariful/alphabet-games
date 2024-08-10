@@ -13,6 +13,8 @@ function continuegame(){
     const showalphabet=document.getElementById('current_alphabet');
     showalphabet.innerText=alphabet;
 
+   
+
 }
 
 
@@ -20,5 +22,6 @@ function playnow(){
     hideelement('home-screen');
     showelement('playground');
     continuegame();
+    // addbackgroundcolor(alphabets);
 }
 
