@@ -5,8 +5,8 @@
 //     const playgrounds=document.getElementById('playground');
 //     playgrounds.classList.remove('hidden');
 // }
-function handlerkeyboardpress(){
-    console.log('button pressed');
+function handlerkeyboardpress(event){
+    console.log(event.key);
 }
 document.addEventListener('keyup',handlerkeyboardpress);
 
