@@ -5,18 +5,22 @@
 //     const playgrounds=document.getElementById('playground');
 //     playgrounds.classList.remove('hidden');
 // }
+function handlerkeyboardpress(){
+    console.log('button pressed');
+}
+document.addEventListener('keyup',handlerkeyboardpress);
+
+
+
+
 function continuegame(){
     const alphabet=getRandomAlphabets();
     console.log(alphabet);
 
-
     const showalphabet=document.getElementById('current_alphabet');
     showalphabet.innerText=alphabet;
 
-
     addbackgroundcolor(alphabet);
-
-   
 
 }
 
