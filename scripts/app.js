@@ -6,7 +6,8 @@
 //     playgrounds.classList.remove('hidden');
 // }
 function handlerkeyboardpress(event){
-    console.log(event.key);
+    const playerpressed=event.key;
+    console.log(playerpressed);
 }
 document.addEventListener('keyup',handlerkeyboardpress);
 
