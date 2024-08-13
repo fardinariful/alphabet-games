@@ -70,7 +70,7 @@ document.addEventListener('keyup',handlerkeyboardpress);
 
 function continuegame(){
     const alphabet=getRandomAlphabets();
-    console.log(alphabet);
+    console.log('Your Random Alphabet',alphabet);
 
     const showalphabet=document.getElementById('current_alphabet');
     showalphabet.innerText=alphabet;
