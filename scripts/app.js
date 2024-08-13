@@ -7,7 +7,11 @@
 // }
 function handlerkeyboardpress(event){
     const playerpressed=event.key;
-    console.log(playerpressed);
+    console.log('player pressed',playerpressed);
+
+    const currentAlphabet=document.getElementById('current_alphabet');
+    console.log('Expected alphabet',currentAlphabet.innerText);
+
 }
 document.addEventListener('keyup',handlerkeyboardpress);
 
