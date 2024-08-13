@@ -17,6 +17,19 @@ function handlerkeyboardpress(event){
 
    if(playerpressed === expectedAlphabet){
     console.log('You get a point');
+    //current score
+    const CurrentScoreElement=document.getElementById('current_score');
+    const CurrentScoreText=CurrentScoreElement.innerText;
+    const currentscore=parseInt(CurrentScoreText);
+    console.log(currentscore);
+    
+
+
+
+
+
+
+
     removebackgroundcolor(expectedAlphabet);
     continuegame();
    }
