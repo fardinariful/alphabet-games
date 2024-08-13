@@ -6,19 +6,61 @@
 //     playgrounds.classList.remove('hidden');
 // }
 function handlerkeyboardpress(event){
-    const playerpressed=event.key;
-    console.log('player pressed',playerpressed);
 
-    const currentAlphabet=document.getElementById('current_alphabet');
-    const expectedAlphabet = currentAlphabet.innerText.toLocaleLowerCase();
-    console.log('Expected alphabet',expectedAlphabet);
+       const playerpressed=event.key;
+       console.log('Player pressed',playerpressed);
 
-    if(playerpressed === expectedAlphabet ){
-        console.log('You get a point')
-    }
-    else{
-        console.log('You lose')
-    }
+    //    expected key that are player should pressed
+   const currentAlphabet=document.getElementById('current_alphabet');
+   const expectedAlphabet = currentAlphabet.innerText.toLocaleLowerCase();
+   console.log('Expected Alphabet',expectedAlphabet);
+
+   if(playerpressed === expectedAlphabet){
+    console.log('You get a point');
+   }
+
+   else{
+    console.log('You lose');
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // const playerpressed=event.key;
+    // console.log('player pressed',playerpressed);
+
+    // const currentAlphabet=document.getElementById('current_alphabet');
+    // const expectedAlphabet = currentAlphabet.innerText.toLocaleLowerCase();
+    // console.log('Expected alphabet',expectedAlphabet);
+
+    // if(playerpressed === expectedAlphabet ){
+    //     console.log('You get a point')
+    // }
+    // else{
+    //     console.log('You lose')
+    // }
 
 }
 document.addEventListener('keyup',handlerkeyboardpress);
