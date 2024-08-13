@@ -24,7 +24,7 @@ function getRandomAlphabets(){
     const index=Math.round(randomNumber);
 
     const alphabet=alphabets[index];
-    console.log(alphabet);
+    // console.log(alphabet);
     return alphabet;
 
 
