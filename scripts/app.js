@@ -22,6 +22,14 @@ function handlerkeyboardpress(event){
     const CurrentScoreText=CurrentScoreElement.innerText;
     const currentscore=parseInt(CurrentScoreText);
     console.log(currentscore);
+
+    //incrase score
+     
+    const newscore=currentscore+1;
+
+    //set new score
+
+    CurrentScoreElement.innerText=newscore;
     
 
 
