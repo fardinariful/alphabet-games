@@ -13,6 +13,12 @@ function addbackgroundcolor(elementID){
     element.classList.add('bg-orange-400');
 }
 
+function removebackgroundcolor(elementID){
+    const element =document.getElementById(elementID);
+    element.classList.remove('bg-orange-400');
+}
+
+
 function getRandomAlphabets(){
     const alphabets_string= 'abcdefghijklmnopqrstuvwxyz';
     const alphabets=alphabets_string.split('');

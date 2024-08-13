@@ -17,6 +17,8 @@ function handlerkeyboardpress(event){
 
    if(playerpressed === expectedAlphabet){
     console.log('You get a point');
+    removebackgroundcolor(expectedAlphabet);
+    continuegame();
    }
 
    else{
@@ -72,8 +74,8 @@ function continuegame(){
     const alphabet=getRandomAlphabets();
     console.log('Your Random Alphabet',alphabet);
 
-    const showalphabet=document.getElementById('current_alphabet');
-    showalphabet.innerText=alphabet;
+     const showalphabet=document.getElementById('current_alphabet');
+     showalphabet.innerText=alphabet;
 
     addbackgroundcolor(alphabet);
 
