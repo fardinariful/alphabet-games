@@ -10,7 +10,15 @@ function handlerkeyboardpress(event){
     console.log('player pressed',playerpressed);
 
     const currentAlphabet=document.getElementById('current_alphabet');
-    console.log('Expected alphabet',currentAlphabet.innerText);
+    const expectedAlphabet = currentAlphabet.innerText.toLocaleLowerCase();
+    console.log('Expected alphabet',expectedAlphabet);
+
+    if(playerpressed === expectedAlphabet ){
+        console.log('You get a point')
+    }
+    else{
+        console.log('You lose')
+    }
 
 }
 document.addEventListener('keyup',handlerkeyboardpress);
