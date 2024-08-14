@@ -32,10 +32,23 @@ function handlerkeyboardpress(event){
     CurrentScoreElement.innerText=newscore;
     
 
+    //current life
 
+    const currentlifeElement = document.getElementById('current_life');
+    const currentlifeText=currentlifeElement.innerText;
+    const currentlife=parseInt(currentlifeText);
+    console.log(currentlife);
 
+    //Decrase score
+    const newlife=currentlife-1;
 
+    //set new life
 
+    currentlifeElement.innerText=newlife;
+
+    // if(newlife === 0){
+    //     console.log('You lose the games')
+    // }
 
 
     removebackgroundcolor(expectedAlphabet);
