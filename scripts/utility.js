@@ -19,6 +19,19 @@ function removebackgroundcolor(elementID){
 }
 
 
+function getthenumberbyID(elementID){
+    const element =document.getElementById(elementID);
+    const elementText= element.innerText;
+    const value= parseInt(elementText);
+    return value;
+}
+
+function setthenumberbyID(elementID){
+    const element=document.getElementById(elementID);
+    element.innerText=value;
+
+}
+
 function getRandomAlphabets(){
     const alphabets_string= 'abcdefghijklmnopqrstuvwxyz';
     const alphabets=alphabets_string.split('');

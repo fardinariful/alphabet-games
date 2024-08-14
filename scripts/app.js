@@ -37,17 +37,20 @@ function handlerkeyboardpress(event){
     const currentlifeElement = document.getElementById('current_life');
     const currentlifeText=currentlifeElement.innerText;
     const currentlife=parseInt(currentlifeText);
-    console.log(currentlife);
+    //console.log(currentlife);
 
     //Decrase score
     const newlife=currentlife-1;
 
     //set new life
-
     currentlifeElement.innerText=newlife;
 
      if(newlife === 0){
-        console.log('You lose the games')
+        gameover();
+        const finalscoreelement=document.getElementById('final_score');
+        const finalscoretext=finalscoreelement.innerText;
+        const finalscore= parseInt(finalscoretext);
+        finalscore.innerText=newscore;
     }
 
 
@@ -58,46 +61,7 @@ function handlerkeyboardpress(event){
    else{
     console.log('You lose');
    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // const playerpressed=event.key;
-    // console.log('player pressed',playerpressed);
-
-    // const currentAlphabet=document.getElementById('current_alphabet');
-    // const expectedAlphabet = currentAlphabet.innerText.toLocaleLowerCase();
-    // console.log('Expected alphabet',expectedAlphabet);
-
-    // if(playerpressed === expectedAlphabet ){
-    //     console.log('You get a point')
-    // }
-    // else{
-    //     console.log('You lose')
-    // }
-
+   
 }
 document.addEventListener('keyup',handlerkeyboardpress);
 
@@ -121,5 +85,11 @@ function playnow(){
     showelement('playground');
     continuegame();
    
+}
+
+function gameover(){
+    hideelement('playground');
+    showelement('score');
+
 }
 
