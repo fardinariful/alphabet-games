@@ -46,9 +46,9 @@ function handlerkeyboardpress(event){
 
     currentlifeElement.innerText=newlife;
 
-    // if(newlife === 0){
-    //     console.log('You lose the games')
-    // }
+     if(newlife === 0){
+        console.log('You lose the games')
+    }
 
 
     removebackgroundcolor(expectedAlphabet);
