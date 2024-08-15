@@ -26,7 +26,7 @@ function getthenumberbyID(elementID){
     return value;
 }
 
-function setthenumberbyID(elementID){
+function setthenumberbyID(elementID,value){
     const element=document.getElementById(elementID);
     element.innerText=value;
 
