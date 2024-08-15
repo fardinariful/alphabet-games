@@ -19,18 +19,18 @@ function removebackgroundcolor(elementID){
 }
 
 
-function getthenumberbyID(elementID){
-    const element =document.getElementById(elementID);
-    const elementText= element.innerText;
-    const value= parseInt(elementText);
-    return value;
-}
+// function getthenumberbyID(elementID){
+//     const element =document.getElementById(elementID);
+//     const elementText= element.innerText;
+//     const value= parseInt(elementText);
+//     return value;
+// }
 
-function setthenumberbyID(elementID,value){
-    const element=document.getElementById(elementID);
-    element.innerText=value;
+// function setthenumberbyID(elementID,value){
+//     const element=document.getElementById(elementID);
+//     element.innerText=value;
 
-}
+// }
 
 function getRandomAlphabets(){
     const alphabets_string= 'abcdefghijklmnopqrstuvwxyz';

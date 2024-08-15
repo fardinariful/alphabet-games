@@ -32,8 +32,22 @@ function handlerkeyboardpress(event){
     CurrentScoreElement.innerText=newscore;
     
 
-    //current life
+   
 
+    //  if(newlife === 0){
+    //     gameover();
+    //     const finalscoreelement=document.getElementById('final_score');
+    //     const finalscoretext=finalscoreelement.innerText;
+    //     const finalscore= parseInt(finalscoretext);
+    //     finalscore.innerText=newscore;
+    // }
+
+
+    removebackgroundcolor(expectedAlphabet);
+    continuegame();
+   }
+
+   else{
     const currentlifeElement = document.getElementById('current_life');
     const currentlifeText=currentlifeElement.innerText;
     const currentlife=parseInt(currentlifeText);
@@ -44,22 +58,7 @@ function handlerkeyboardpress(event){
 
     //set new life
     currentlifeElement.innerText=newlife;
-
-     if(newlife === 0){
-        gameover();
-        const finalscoreelement=document.getElementById('final_score');
-        const finalscoretext=finalscoreelement.innerText;
-        const finalscore= parseInt(finalscoretext);
-        finalscore.innerText=newscore;
-    }
-
-
-    removebackgroundcolor(expectedAlphabet);
-    continuegame();
-   }
-
-   else{
-    console.log('You lose');
+    //console.log('You lose');
    }
    
 }
