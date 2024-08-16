@@ -32,6 +32,12 @@ function setlifescorenumberbyID(elementID,value){
 
 }
 
+function getElementbyID(elementID){
+    const element=document.getElementById(elementID);
+    const text=element.innerText;
+    return text;
+}
+
 function getRandomAlphabets(){
     const alphabets_string= 'abcdefghijklmnopqrstuvwxyz';
     const alphabets=alphabets_string.split('');

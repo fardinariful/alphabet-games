@@ -10,6 +10,11 @@ function handlerkeyboardpress(event){
        const playerpressed=event.key;
        console.log('Player pressed',playerpressed);
 
+       //stop game suddenly
+       if(playerpressed === 'Escape'){
+        gameover();
+       }
+
     //    expected key that are player should pressed
    const currentAlphabet=document.getElementById('current_alphabet');
    const expectedAlphabet = currentAlphabet.innerText.toLocaleLowerCase();
@@ -70,8 +75,16 @@ function gameover(){
     hideelement('playground');
     showelement('score');
 
+
+     //final score set
     const last_score=getlifescorenumberbyID('current_score');
     setlifescorenumberbyID('final_score',last_score);
+    
+    //remove background color on current alphabet
+
+    const last_alphabet=getElementbyID('current_alphabet');
+    removebackgroundcolor(last_alphabet);
+
 
 }
 
