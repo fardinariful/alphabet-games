@@ -16,13 +16,11 @@ function handlerkeyboardpress(event){
    console.log('Expected Alphabet',expectedAlphabet);
 
    if(playerpressed === expectedAlphabet){
-    console.log('You get a point');
 
     const currentscore=getlifescorenumberbyID('current_score');
     const updatedscore=currentscore+1;
     setlifescorenumberbyID('current_score',updatedscore);
     
-
     removebackgroundcolor(expectedAlphabet);
     continuegame();
    }
@@ -56,6 +54,7 @@ function continuegame(){
 
 
 function playnow(){
+    //hide everything expect playground
     hideelement('home-screen');
     hideelement('score');
     showelement('playground');
@@ -70,6 +69,9 @@ function playnow(){
 function gameover(){
     hideelement('playground');
     showelement('score');
+
+    const last_score=getlifescorenumberbyID('current_score');
+    setlifescorenumberbyID('final_score',last_score);
 
 }
 
