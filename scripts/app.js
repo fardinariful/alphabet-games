@@ -18,30 +18,14 @@ function handlerkeyboardpress(event){
    if(playerpressed === expectedAlphabet){
     console.log('You get a point');
     //current score
-    const CurrentScoreElement=document.getElementById('current_score');
-    const CurrentScoreText=CurrentScoreElement.innerText;
-    const currentscore=parseInt(CurrentScoreText);
-    console.log(currentscore);
-
-    //incrase score
-     
-    const newscore=currentscore+1;
-
-    //set new score
-
-    CurrentScoreElement.innerText=newscore;
+    // const CurrentScoreElement=document.getElementById('current_score');
+    // const CurrentScoreText=CurrentScoreElement.innerText;
+    // const currentscore=parseInt(CurrentScoreText);
+    // console.log(currentscore);
+    const currentscore=getlifescorenumberbyID('current_score');
+    const updatedscore=currentscore+1;
+    setlifescorenumberbyID('current_score',updatedscore);
     
-
-   
-
-    //  if(newlife === 0){
-    //     gameover();
-    //     const finalscoreelement=document.getElementById('final_score');
-    //     const finalscoretext=finalscoreelement.innerText;
-    //     const finalscore= parseInt(finalscoretext);
-    //     finalscore.innerText=newscore;
-    // }
-
 
     removebackgroundcolor(expectedAlphabet);
     continuegame();
@@ -59,6 +43,15 @@ function handlerkeyboardpress(event){
     //set new life
     currentlifeElement.innerText=newlife;
     //console.log('You lose');
+
+     if(newlife === 0){
+        gameover();
+        const finalscoreelement=document.getElementById('final_score');
+        const finalscoretext=finalscoreelement.innerText;
+        const finalscore= parseInt(finalscoretext);
+        finalscore.innerText=newscore;
+    }
+
    }
    
 }
