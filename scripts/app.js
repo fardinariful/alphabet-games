@@ -32,25 +32,34 @@ function handlerkeyboardpress(event){
    }
 
    else{
-    const currentlifeElement = document.getElementById('current_life');
-    const currentlifeText=currentlifeElement.innerText;
-    const currentlife=parseInt(currentlifeText);
-    //console.log(currentlife);
 
-    //Decrase score
-    const newlife=currentlife-1;
+    const currentlife=getlifescorenumberbyID('current_life');
+    const updatedlife=currentlife-1;
+    setlifescorenumberbyID('current_life',updatedlife);
 
-    //set new life
-    currentlifeElement.innerText=newlife;
-    //console.log('You lose');
 
-     if(newlife === 0){
-        gameover();
-        const finalscoreelement=document.getElementById('final_score');
-        const finalscoretext=finalscoreelement.innerText;
-        const finalscore= parseInt(finalscoretext);
-        finalscore.innerText=newscore;
-    }
+
+
+
+    // const currentlifeElement = document.getElementById('current_life');
+    // const currentlifeText=currentlifeElement.innerText;
+    // const currentlife=parseInt(currentlifeText);
+    // //console.log(currentlife);
+
+    // //Decrase score
+    // const newlife=currentlife-1;
+
+    // //set new life
+    // currentlifeElement.innerText=newlife;
+    // //console.log('You lose');
+
+    //  if(newlife === 0){
+    //     gameover();
+    //     const finalscoreelement=document.getElementById('final_score');
+    //     const finalscoretext=finalscoreelement.innerText;
+    //     const finalscore= parseInt(finalscoretext);
+    //     finalscore.innerText=newscore;
+    // }
 
    }
    
