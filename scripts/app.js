@@ -59,6 +59,10 @@ function playnow(){
     hideelement('home-screen');
     hideelement('score');
     showelement('playground');
+
+    //reset life and score
+    setlifescorenumberbyID('current_life',5);
+    setlifescorenumberbyID('current_score',0);
     continuegame();
    
 }
