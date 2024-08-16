@@ -17,11 +17,7 @@ function handlerkeyboardpress(event){
 
    if(playerpressed === expectedAlphabet){
     console.log('You get a point');
-    //current score
-    // const CurrentScoreElement=document.getElementById('current_score');
-    // const CurrentScoreText=CurrentScoreElement.innerText;
-    // const currentscore=parseInt(CurrentScoreText);
-    // console.log(currentscore);
+
     const currentscore=getlifescorenumberbyID('current_score');
     const updatedscore=currentscore+1;
     setlifescorenumberbyID('current_score',updatedscore);
@@ -37,29 +33,9 @@ function handlerkeyboardpress(event){
     const updatedlife=currentlife-1;
     setlifescorenumberbyID('current_life',updatedlife);
 
-
-
-
-
-    // const currentlifeElement = document.getElementById('current_life');
-    // const currentlifeText=currentlifeElement.innerText;
-    // const currentlife=parseInt(currentlifeText);
-    // //console.log(currentlife);
-
-    // //Decrase score
-    // const newlife=currentlife-1;
-
-    // //set new life
-    // currentlifeElement.innerText=newlife;
-    // //console.log('You lose');
-
-    //  if(newlife === 0){
-    //     gameover();
-    //     const finalscoreelement=document.getElementById('final_score');
-    //     const finalscoretext=finalscoreelement.innerText;
-    //     const finalscore= parseInt(finalscoretext);
-    //     finalscore.innerText=newscore;
-    // }
+    if(updatedlife === 0){
+        gameover();
+    }
 
    }
    
@@ -67,14 +43,12 @@ function handlerkeyboardpress(event){
 document.addEventListener('keyup',handlerkeyboardpress);
 
 
-
-
 function continuegame(){
     const alphabet=getRandomAlphabets();
     console.log('Your Random Alphabet',alphabet);
 
-     const showalphabet=document.getElementById('current_alphabet');
-     showalphabet.innerText=alphabet;
+    const showalphabet=document.getElementById('current_alphabet');
+    showalphabet.innerText=alphabet;
 
     addbackgroundcolor(alphabet);
 
@@ -83,6 +57,7 @@ function continuegame(){
 
 function playnow(){
     hideelement('home-screen');
+    hideelement('score');
     showelement('playground');
     continuegame();
    
